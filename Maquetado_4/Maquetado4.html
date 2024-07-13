@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Videojuegos</title>
+    <link rel="stylesheet" href="/Maquetado_4/styles2.css">
+</head>
+<body>
+    <h1>Natsu's Tienda</h1>
+    <input type="text" id="search" placeholder="Buscar videojuego..." oninput="filterProducts()">
+
+    <div class="product-list" id="product-list"></div>
+
+    <div id="modal" class="modal" onclick="hideInfo()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close" onclick="hideInfo()">&times;</span>
+            <div class="modal-body d-flex">
+                <img id="modal-image" src="" alt="" class="modal-img">
+                <div class="modal-text">
+                    <h2 id="modal-title"></h2>
+                    <p id="modal-description"></p>
+                    <p id="modal-price"></p>
+                    <button class="btn btn-primary">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/Maquetado_4/Juegos.js"></script>
+</body>
+</html>
